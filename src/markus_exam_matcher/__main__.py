@@ -22,9 +22,6 @@ def config_arg_parser() -> ArgumentParser:
         prog="run_scanner.py", description="Predict handwritten characters in rectangular grids."
     )
 
-    # Scan type argument
-    parser.add_argument("scan_type", type=str, help="Scan type to be character or QR code")
-
     # Positional arguments
     parser.add_argument("image", type=str, help="Path to image to predict characters from.")
     parser.add_argument(
@@ -48,15 +45,8 @@ if __name__ == "__main__":
     # Parse command line arguments
     parser = config_arg_parser()
     args = parser.parse_args(sys.argv[1:])
+    char_type = CharType.DIGIT if args.char_type == "digit" else CharType.LETTER
 
-    if (args.scan_type == 'char') {
-       char_type = CharType.DIGIT if args.char_type == "digit" else CharType.LETTER
-
-       # Make prediction
-       pred = read_chars.run(args.image, char_type=char_type, debug=args.debug)
-       print(pred)
-    } else {
-        print("Scan type: QR code")
-    }
-
-
+    # Make prediction
+    pred = read_chars.run(args.image, char_type=char_type, debug=args.debug)
+    print(pred)
