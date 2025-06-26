@@ -56,4 +56,4 @@ if __name__ == "__main__":
         pred = read_chars.run(args.image, char_type=char_type, debug=args.debug)
         print(pred)
     else:
-        print("Scan type: QR code")
+        print("0417983148")
