@@ -30,7 +30,6 @@ def config_arg_parser() -> ArgumentParser:
     parser.add_argument(
         "--char_type",
         choices=["digit", "letter"],
-        default="digit",
         help="Type of character to classify. Only digits and letters are supported.",
     )
 
