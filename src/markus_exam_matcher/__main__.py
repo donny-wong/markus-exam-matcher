@@ -28,7 +28,7 @@ def config_arg_parser() -> ArgumentParser:
     # Positional arguments
     parser.add_argument("image", type=str, help="Path to image to predict characters from.")
     parser.add_argument(
-        "-char_type",
+        "char_type",
         choices=["digit", "letter"],
         help="Type of character to classify. Only digits and letters are supported.",
     )
