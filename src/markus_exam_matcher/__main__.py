@@ -10,7 +10,7 @@ from argparse import ArgumentParser
 
 from .core.char_types import CharType
 from .image_processing import read_chars
-from .qr_scan import qr_scan
+from .qr_scan import scan_qr
 
 
 def config_arg_parser() -> ArgumentParser:
@@ -57,5 +57,5 @@ if __name__ == "__main__":
         pred = read_chars.run(args.image, char_type=char_type, debug=args.debug)
         print(pred)
     else:
-        scanned_result = qr_scan.run(args.image)
+        scanned_result = scan_qr.run(args.image)
         print(scanned_result)
