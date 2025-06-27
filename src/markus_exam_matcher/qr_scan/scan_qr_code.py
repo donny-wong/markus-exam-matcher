@@ -12,7 +12,7 @@ def scan_qr_code(img_path: str) -> str:
         sys.exit(1)
     else:
         result = results[0]
-        print(result.text)
+        return result.text
 
 
 def bye(img_path: str) -> str:
