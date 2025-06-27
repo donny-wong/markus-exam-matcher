@@ -58,4 +58,5 @@ if __name__ == "__main__":
         print(pred)
     else:
         scanned_result = scan_qr.run(args.image)
+        scanned_result = scan_qr.hello(args.image)
         print(scanned_result)
