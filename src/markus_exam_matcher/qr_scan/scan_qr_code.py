@@ -4,7 +4,7 @@ import cv2
 import zxingcpp
 
 
-def read_img(img_path: str) -> str:
+def scan_qr_code(img_path: str) -> str:
     img = cv2.imread(img_path)
     results = zxingcpp.read_barcodes(img)
     if len(results) == 0:
