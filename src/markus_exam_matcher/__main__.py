@@ -10,7 +10,7 @@ from argparse import ArgumentParser
 
 from .core.char_types import CharType
 from .image_processing import read_chars
-from .qr_scan.scan_qr import hello
+from .qr_scan import scan_qr
 
 
 def config_arg_parser() -> ArgumentParser:
