@@ -13,3 +13,7 @@ def scan_qr_code(img_path: str) -> str:
     else:
         result = results[0]
         print(result.text)
+
+
+def bye(img_path: str) -> str:
+    return "444455"

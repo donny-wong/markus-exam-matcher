@@ -6,4 +6,4 @@ def run(img_path: str) -> str:
 
 
 def hello(img_path: str) -> str:
-    return "1234"
+    return scan_qr_code.bye(img_path)
